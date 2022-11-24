@@ -6,20 +6,27 @@
         {
             Console.WriteLine("This is Logical Programming Practice Problem");
 
-            int n1 = 0;
-            int n2 = 1;
-            int n3;
-            Console.Write("Emter a number u want the Fobonacci Serise");
+
+            Console.Write("Emter a number : ");
             int number = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(n1);
-            Console.WriteLine(n2);
-            for (int i = 2; i < number; i++)
+            int sumOfDivisors = 0;
+
+            for (int i = 1; i < number; i++)
             {
-                n3 = n1 + n2;
-                Console.WriteLine(n3);
-                n1 = n2;
-                n2 = n3;
+                if (number % i == 0)
+                {
+                    sumOfDivisors += i;
+                }
             }
+            if (number == sumOfDivisors)
+            {
+                Console.WriteLine("Number {0} is a perfect number",number);
+            }
+            else
+            {
+                Console.WriteLine("Number {0} is Not a perfect number",number);
+            }
+
         }
     }
 }
