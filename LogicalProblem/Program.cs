@@ -9,22 +9,21 @@
 
             Console.Write("Emter a number : ");
             int number = Convert.ToInt32(Console.ReadLine());
-            int sumOfDivisors = 0;
-
-            for (int i = 1; i < number; i++)
+            int count = 0;
+            for (int i = 1; i <= number; i++)
             {
-                if (number % i == 0)
+                if (number % i ==0)
                 {
-                    sumOfDivisors += i;
+                    count++;
                 }
             }
-            if (number == sumOfDivisors)
+            if (count == 2)
             {
-                Console.WriteLine("Number {0} is a perfect number",number);
+                Console.WriteLine($"The number {number} is Prime Number");
             }
-            else
-            {
-                Console.WriteLine("Number {0} is Not a perfect number",number);
+            else 
+            { 
+                Console.WriteLine($"The number {number} is Not Prime Number");
             }
 
         }
