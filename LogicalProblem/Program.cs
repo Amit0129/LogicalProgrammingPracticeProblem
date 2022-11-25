@@ -9,22 +9,16 @@
 
             Console.Write("Emter a number : ");
             int number = Convert.ToInt32(Console.ReadLine());
-            int count = 0;
-            for (int i = 1; i <= number; i++)
+            
+            int reverse = 0;
+            int temp = number;
+            while (number > 0)
             {
-                if (number % i ==0)
-                {
-                    count++;
-                }
+                int rem = number % 10;
+                reverse = (reverse * 10) + rem;
+                number = number / 10;
             }
-            if (count == 2)
-            {
-                Console.WriteLine($"The number {number} is Prime Number");
-            }
-            else 
-            { 
-                Console.WriteLine($"The number {number} is Not Prime Number");
-            }
+            Console.WriteLine($"Reverse of the number {temp} is {reverse}");
 
         }
     }
